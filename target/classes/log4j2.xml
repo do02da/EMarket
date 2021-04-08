@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+    <appenders>
+        <!-- console appender 설정 -->
+        <Console name="Console" target="SYSTEM_OUT">
+            <!-- layout 설정 -->
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+        </Console>
+
+    </appenders>
+
+    <loggers>
+        <!-- root는 기본적으로 하나가 존재해야 하며 다른 logger들은 여러개 존재 가능 -->
+        <root level="debug">
+            <appender-ref ref="Console" />
+        </root>
+
+
+    </loggers>
+
+</configuration>
