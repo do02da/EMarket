@@ -14,9 +14,10 @@
 <head>
     <title>Title</title>
 
-    <%@ include file="/WEB-INF/include/include-header.jspf" %>
+
 </head>
 <body>
+<button type="button" class="btn btn-primary">test</button>
 Test, It's home.jsp
 </body>
 </html>
