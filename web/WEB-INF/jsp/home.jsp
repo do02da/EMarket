@@ -8,8 +8,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
 <!doctype html>
-<html lang="ko"/>
-<html>
+<html lang="ko">
 <head>
     <title>Title</title>
 
@@ -20,7 +19,10 @@
 
 <main>
     <div class="container">
-        Test, It's home.jsp 테스트
+<br><br><br>        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br>
+<br><br><br>        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br>        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     </div>
 </main>
 
