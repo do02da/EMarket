@@ -3,7 +3,6 @@
   User: Do0
   Date: 2021-04-02
   Time: 오후 5:03
-  To change this template use File | Settings | File Templates.
 --%>
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -17,7 +16,16 @@
     <%@ include file="/WEB-INF/include/include-header.jspf" %>
 </head>
 <body>
-<button type="button" class="btn btn-primary">test</button>
-Test, It's home.jsp
+<%@ include file="/WEB-INF/jsp/header.jsp" %>
+
+<main>
+    <div class="container">
+        Test, It's home.jsp 테스트
+    </div>
+</main>
+
+<footer>
+
+</footer>
 </body>
 </html>
