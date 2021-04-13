@@ -6,8 +6,16 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<body>
 
-</body>
-</html>
+<footer class="footer mt-5 py-3 bg-light">
+    <div class="container">
+    <h3 class="text-secondary ">EMarket</h3>
+    <p>
+        EMarket
+        <span class="text-primary">kdyw</span>
+        / Designed by
+        <span class="text-primary">Hongku</span>
+    </p>
+    </div>
+</footer>
+
