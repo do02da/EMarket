@@ -8,26 +8,72 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
 <!doctype html>
-<html lang="ko">
+<html lang="ko" class="h-100">
+<html>
 <head>
     <title>Title</title>
 
     <%@ include file="/WEB-INF/include/include-header.jspf" %>
 </head>
-<body>
-<%@ include file="/WEB-INF/jsp/header.jsp" %>
+<body class="h-100">
 
-<main>
-    <div class="container">
-<br><br><br>        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br>
-<br><br><br>        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br>        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    </div>
-</main>
+    <%@ include file="/WEB-INF/jsp/header.jsp" %>
+    <main>
+        <div class="container">
+            Test, It's home.jsp<br>
+            Test, It's home.jsp<br>
+            Test, It's home.jsp<br>
+            Test, It's home.jsp<br>
+            Test, It's home.jsp<br>
+            Test, It's home.jsp<br>
+            Test, It's home.jsp<br>
+            Test, It's home.jsp<br>
+            Test, It's home.jsp<br>
+            Test, It's home.jsp<br>
+            Test, It's home.jsp<br>
+            Test, It's home.jsp<br>
+            Test, It's home.jsp<br>
+            Test, It's home.jsp<br>
+            Test, It's home.jsp<br>
+            Test, It's home.jsp<br>
+            Test, It's home.jsp<br>
+            Test, It's home.jsp<br>
+            Test, It's home.jsp<br>
+            Test, It's home.jsp<br>
+            Test, It's home.jsp<br>
+            Test, It's home.jsp<br>
+            Test, It's home.jsp<br>
+            Test, It's home.jsp<br>
+            Test, It's home.jsp<br>
+            Test, It's home.jsp<br>
+            Test, It's home.jsp<br>
+            Test, It's home.jsp<br>
+            Test, It's home.jsp<br>
+            Test, It's home.jsp<br>
+            Test, It's home.jsp<br>
+            Test, It's home.jsp<br>
+            Test, It's home.jsp<br>
+            Test, It's home.jsp<br>
+            Test, It's home.jsp<br>
+            Test, It's home.jsp<br>
+            Test, It's home.jsp<br>
+            Test, It's home.jsp<br>
+            Test, It's home.jsp<br>
+            Test, It's home.jsp<br>
+            Test, It's home.jsp<br>
+            Test, It's home.jsp<br>
+            Test, It's home.jsp<br>
+            Test, It's home.jsp<br>
+            Test, It's home.jsp<br>
+            Test, It's home.jsp<br>
+            Test, It's home.jsp<br>
+            Test, It's home.jsp<br>
+            Test, It's home.jsp<br>
+            Test, It's home.jsp<br>
+        </div>
+    </main>
 
-<footer>
+<jsp:include page="footer.jsp"/>
 
-</footer>
 </body>
 </html>
