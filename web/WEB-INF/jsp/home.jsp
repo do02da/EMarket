@@ -18,6 +18,7 @@
 <body class="h-100">
 
     <%@ include file="/WEB-INF/jsp/header.jsp" %>
+
     <main>
         <div class="container">
             Test, It's home.jsp<br>
