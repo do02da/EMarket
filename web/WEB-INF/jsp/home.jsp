@@ -5,10 +5,16 @@
   Time: 오후 5:03
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8"%>
+<!doctype html>
+<html lang="ko"/>
 <html>
 <head>
     <title>Title</title>
+
+    <%@ include file="/WEB-INF/include/include-header.jspf" %>
 </head>
 <body>
 Test, It's home.jsp
