@@ -8,13 +8,13 @@
 
 <footer class="footer mt-5 py-3 bg-light">
     <div class="container">
-        <h3 class="text-secondary ">EMarket</h3>
-        <p>
-            EMarket
-            <span class="text-primary">kdyw</span>
-            / Designed by
-            <span class="text-primary">Hongku</span>
-        </p>
+    <h3 class="text-secondary ">EMarket</h3>
+    <p>
+        EMarket
+        <span class="text-primary">kdyw</span>
+        / Designed by
+        <span class="text-primary">Hongku</span>
+    </p>
 
         <!-- 깃헙 링크 -->
         <a href="https://github.com/wellcom8/EMarket" class="text-dark">
@@ -31,6 +31,8 @@
                 </svg>
             </a>
         </div>
+
     </div>
+
 </footer>
 
