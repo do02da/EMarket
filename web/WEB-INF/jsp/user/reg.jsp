@@ -8,8 +8,11 @@
 <html>
 <head>
     <title>Title</title>
+    <%@ include file="/WEB-INF/include/include-header.jspf" %>
 </head>
-<body>
 
+<body>
+<%@ include file="/WEB-INF/jsp/header.jsp" %>
+<%@ include file="/WEB-INF/jsp/footer.jsp" %>
 </body>
 </html>

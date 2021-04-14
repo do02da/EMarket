@@ -20,8 +20,12 @@
         </div>
 
         <div class="col-md-3 text-end">
-            <button type="button" class="btn btn-outline-primary me-2">Login</button>
-            <button type="button" class="btn btn-primary">Sign-up</button>
+            <button type="button" class="btn btn-outline-primary me-2" id="login_btn">Login</button>
+            <button type="button" class="btn btn-primary" id="reg_btn">Sign-up</button>
         </div>
+
+        <%@include file="/WEB-INF/include/include-body.jspf" %>
+        <script src="<c:url value='/js/header.js'/>" charset="UTF-8"></script>
+
     </header>
 </div>
