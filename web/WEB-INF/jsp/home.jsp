@@ -15,61 +15,12 @@
 
     <%@ include file="/WEB-INF/include/include-header.jspf" %>
 </head>
-<body class="h-100">
+<body class="d-flex flex-column h-100">
 
     <%@ include file="/WEB-INF/jsp/header.jsp" %>
 
     <main>
         <div class="container">
-            Test, It's home.jsp<br>
-            Test, It's home.jsp<br>
-            Test, It's home.jsp<br>
-            Test, It's home.jsp<br>
-            Test, It's home.jsp<br>
-            Test, It's home.jsp<br>
-            Test, It's home.jsp<br>
-            Test, It's home.jsp<br>
-            Test, It's home.jsp<br>
-            Test, It's home.jsp<br>
-            Test, It's home.jsp<br>
-            Test, It's home.jsp<br>
-            Test, It's home.jsp<br>
-            Test, It's home.jsp<br>
-            Test, It's home.jsp<br>
-            Test, It's home.jsp<br>
-            Test, It's home.jsp<br>
-            Test, It's home.jsp<br>
-            Test, It's home.jsp<br>
-            Test, It's home.jsp<br>
-            Test, It's home.jsp<br>
-            Test, It's home.jsp<br>
-            Test, It's home.jsp<br>
-            Test, It's home.jsp<br>
-            Test, It's home.jsp<br>
-            Test, It's home.jsp<br>
-            Test, It's home.jsp<br>
-            Test, It's home.jsp<br>
-            Test, It's home.jsp<br>
-            Test, It's home.jsp<br>
-            Test, It's home.jsp<br>
-            Test, It's home.jsp<br>
-            Test, It's home.jsp<br>
-            Test, It's home.jsp<br>
-            Test, It's home.jsp<br>
-            Test, It's home.jsp<br>
-            Test, It's home.jsp<br>
-            Test, It's home.jsp<br>
-            Test, It's home.jsp<br>
-            Test, It's home.jsp<br>
-            Test, It's home.jsp<br>
-            Test, It's home.jsp<br>
-            Test, It's home.jsp<br>
-            Test, It's home.jsp<br>
-            Test, It's home.jsp<br>
-            Test, It's home.jsp<br>
-            Test, It's home.jsp<br>
-            Test, It's home.jsp<br>
-            Test, It's home.jsp<br>
             Test, It's home.jsp<br>
         </div>
     </main>

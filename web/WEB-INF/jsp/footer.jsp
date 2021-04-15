@@ -6,7 +6,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<footer class="footer mt-5 py-3 bg-light">
+<footer class="footer mt-auto py-3 bg-light">
     <div class="container">
     <h3 class="text-secondary ">EMarket</h3>
     <p>
@@ -14,7 +14,7 @@
         <span class="text-primary">kdyw</span>
         / Designed by
         <span class="text-primary">Hongku</span>
-    </p>
+
 
         <!-- 깃헙 링크 -->
         <a href="https://github.com/wellcom8/EMarket" class="text-dark">
@@ -33,6 +33,6 @@
         </div>
 
     </div>
-
+    </p>
 </footer>
 
