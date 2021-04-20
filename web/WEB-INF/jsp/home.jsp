@@ -25,7 +25,7 @@
         </div>
     </main>
 
-<jsp:include page="footer.jsp"/>
+    <%@ include file="/WEB-INF/jsp/footer.jsp" %>
 
 </body>
 </html>
