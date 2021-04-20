@@ -4,7 +4,7 @@
   Date: 2021-04-13
   Time: 오후 3:51
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html; charset=UTF-8" language="java" %>
 <html class="h-100">
 <head>
     <title>Title</title>
@@ -13,7 +13,7 @@
     <link href="${pageContext.request.contextPath}/css/signin.css" rel="stylesheet">
 </head>
 <body class="d-flex flex-column h-100">
-<jsp:include page="../header.jsp"/>
+<%@ include file="/WEB-INF/jsp/header.jsp" %>
 
 <main class="form-signin text-center">
     <form>
@@ -39,7 +39,7 @@
     </form>
 </main>
 
-<jsp:include page="../footer.jsp"/>
+<%@ include file="/WEB-INF/jsp/footer.jsp" %>
 
 </body>
 </html>
