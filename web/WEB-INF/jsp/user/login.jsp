@@ -24,6 +24,7 @@
             <input type="email" class="form-control" id="input_email" placeholder="name@example.com">
             <label for="input_email">이메일</label>
         </div>
+
         <div class="form-floating">
             <input type="password" class="form-control" id="input_pw" placeholder="비밀번호">
             <label for="input_pw">비밀번호</label>
