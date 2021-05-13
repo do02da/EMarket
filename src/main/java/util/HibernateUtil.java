@@ -2,16 +2,21 @@ package util;
 
 import db.crud.Member;
 import org.hibernate.SessionFactory;
-import org.hibernate.boot.registry.StandardServiceRegistry;
+
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.boot.registry.StandardServiceRegistry;
+
+/**
+ * @author Deepak Kumar * Web: http://www.roseindia.net
+ *  Update by arahansa@naver.com
+ */
 
 public class HibernateUtil {
     private static SessionFactory sessionFactory;
     private static String configFile = "hibernate.cfg.xml";
 
-
-    static{
+    static {
         try {
             Configuration cfg = new Configuration().configure(configFile);
             cfg.addAnnotatedClass(Member.class);
@@ -20,17 +25,16 @@ public class HibernateUtil {
             StandardServiceRegistry standardServiceRegistry = sb.build();
             sessionFactory = cfg.buildSessionFactory(standardServiceRegistry);
         } catch (Throwable th) {
-            System.err.println("initial SessionFactory creation failed" + th);
+            System.err.println("Enitial SessionFactory creation failed" + th);
             throw new ExceptionInInitializerError(th);
         }
-    } // static
+    }
 
-    public static SessionFactory getSessionFactory(){
+    public static SessionFactory getSessionFactory() {
         return sessionFactory;
-    } // getSessionFactory
+    }
 
-    public void shutdown(){
+    public void shutdown() {
         sessionFactory.close();
-    } // shutdown
-
-} // class
+    }
+}

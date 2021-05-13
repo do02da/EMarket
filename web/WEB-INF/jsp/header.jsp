@@ -24,7 +24,7 @@
             <button type="button" class="btn btn-primary" id="reg_btn">Sign-up</button>
         </div>
 
-        <%@include file="/WEB-INF/include/include-body.jspf" %>
+        <%@ include file="/WEB-INF/include/include-body.jspf" %>
         <script src="<c:url value='/js/header.js'/>" charset="UTF-8"></script>
 
     </header>
