@@ -16,7 +16,7 @@
     <%@ include file="/WEB-INF/jsp/header.jsp" %>
 
     <main class="form-signup">
-        <form>
+        <form action="/register.do" method="post">
             <h1 class="h3 mb-3 fw-normal text-center">Sign up</h1>
             <div class="form-floating">
                 <input type="email" class="form-control" id="email">
