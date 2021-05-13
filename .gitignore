@@ -1,1 +1,3 @@
 out/
+target/
+src/main/resources/config/globals.properties

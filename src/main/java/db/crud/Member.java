@@ -7,6 +7,8 @@ import javax.persistence.Id;
 @Entity
 public class Member {
 
+    // @Id : 해당 프로퍼티가 테이블의 주키(primary key) 역할
+    // @GeneratedValue : 주키의 값을 위한 자동 생성 전략을 명시하는데 사용
     @Id
     @GeneratedValue
     private int id;
