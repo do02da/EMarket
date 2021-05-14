@@ -3,33 +3,70 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Value;
 import util.HibernateUtil;
+
+// https://opentutorials.org/course/1519/8279
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 public class HibernateTest {
     Logger logger = (Logger) LogManager.getLogger(this.getClass());
     SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
 
+
+
     @Test
     public void test() {
-        logger.debug("insert test");
+        // Insert
+        Member member = new Member("test", "hello test");
+        insert(member);
 
-        Member member = Member.builder()
-                .name("test4")
-                .message("test message3")
-                .build();
-        Session session = sessionFactory.getCurrentSession();
+        // Select One
+        Member selectedMember = selectedById(1);
 
-        session.beginTransaction();
+        // Update
+        selectedMember.setMessage("Hello Hibernate");
+        update(selectedMember);
+        Member updatedMember = selectedById(1);
 
-        // 각각의 처리 들어갈 부분
+        // Delete
+        delete(updatedMember);
+        Member deletedMember = selectedById(1);
 
-        session.save(member);
-
-        session.getTransaction().commit();
-        Assertions.assertEquals(1, 1);
-
+        // 객체 x와 y가 일치함을 확인
+        assertNull(deletedMember);
     }
 
-} // class
+    private void delete(Member updatedMember) {
+        Session session = sessionFactory.getCurrentSession();
+        session.beginTransaction();
+        session.delete(updatedMember);
+        session.getTransaction().commit();
+    }
+
+    private void update(Member selectedMember) {
+        Session session = sessionFactory.getCurrentSession();
+        session.beginTransaction();
+        session.update(selectedMember);
+        session.getTransaction().commit();
+    }
+
+    public Member selectedById(int i) {
+        Session session = sessionFactory.getCurrentSession();
+        session.beginTransaction();
+        Member selectedMember = session.get(Member.class, i);
+        session.getTransaction().commit();
+
+        return selectedMember;
+    }
+
+    private void insert(Member member) {
+        Session session = sessionFactory.getCurrentSession();
+        session.beginTransaction();
+        session.save(member);
+        session.getTransaction().commit();
+    }
+}

@@ -1,33 +1,21 @@
 <?xml version='1.0' encoding='utf-8'?>
 <!DOCTYPE hibernate-configuration PUBLIC
         "-//Hibernate/Hibernate Configuration DTD//EN"
-        "http://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
-
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
     <session-factory>
-        <!-- Database connection settings -->
-        <property name="connection.driver_class">org.mariadb.jdbc.Driver</property>
-        <property name="connection.url">jdbc:mariadb://13.209.48.139:3306/TestDB</property>
-        <property name="connection.username">root</property>
-        <property name="connection.password">root</property>
         <property name="dialect">org.hibernate.dialect.MariaDB103Dialect</property>
-
-
-
-        <!--        &lt;!&ndash; Disable the second-level cache &ndash;&gt;-->
-        <!--        <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>-->
-
-        <!-- Echo all executed SQL to stdout -->
         <property name="show_sql">true</property>
         <property name="hbm2ddl.auto">create</property>
 
-        <!-- Enable Hibernate's current session context -->
-        <property name="current_session_context_class">thread</property>
+
+        <property name="hibernate.current_session_context_class">thread</property>
 
         <!-- JDBC connection pool (use the built-in) -->
         <property name="connection.pool_size">1</property>
 
         <mapping class="db.crud.Member" />
+        <!-- DB schema will be updated if needed -->
+        <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
     </session-factory>
-
 </hibernate-configuration>

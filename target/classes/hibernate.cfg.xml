@@ -4,12 +4,7 @@
         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
     <session-factory>
-        <property name="connection.url">#{db['jdbc.url']}</property>
-        <property name="connection.driver_class">#{db['jdbc.driver']}</property>
-        <property name="connection.username">#{db['jdbc.user']}</property>
-        <property name="connection.password">#{db['jdbc.password']}</property>
         <property name="dialect">org.hibernate.dialect.MariaDB103Dialect</property>
-
         <property name="show_sql">true</property>
         <property name="hbm2ddl.auto">create</property>
 
