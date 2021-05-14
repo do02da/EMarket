@@ -10,29 +10,53 @@ import util.HibernateUtil;
 // https://opentutorials.org/course/1519/8279
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 public class HibernateTest {
     Logger logger = (Logger) LogManager.getLogger(this.getClass());
     SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
 
+
+
     @Test
     public void test() {
         // Insert
-        Member member = new Member("test", "hello world");
+        Member member = new Member("test", "hello test");
         insert(member);
 
         // Select One
         Member selectedMember = selectedById(1);
 
+        // Update
+        selectedMember.setMessage("Hello Hibernate");
+        update(selectedMember);
+        Member updatedMember = selectedById(1);
+
+        // Delete
+        delete(updatedMember);
+        Member deletedMember = selectedById(1);
+
         // 객체 x와 y가 일치함을 확인
-        assertEquals("hello world", selectedMember.getMessage());
+        assertNull(deletedMember);
+    }
+
+    private void delete(Member updatedMember) {
+        Session session = sessionFactory.getCurrentSession();
+        session.beginTransaction();
+        session.delete(updatedMember);
+        session.getTransaction().commit();
+    }
+
+    private void update(Member selectedMember) {
+        Session session = sessionFactory.getCurrentSession();
+        session.beginTransaction();
+        session.update(selectedMember);
+        session.getTransaction().commit();
     }
 
     public Member selectedById(int i) {
         Session session = sessionFactory.getCurrentSession();
         session.beginTransaction();
-
-        // 각각의 처리 들어갈 부분
         Member selectedMember = session.get(Member.class, i);
         session.getTransaction().commit();
 
@@ -42,8 +66,6 @@ public class HibernateTest {
     private void insert(Member member) {
         Session session = sessionFactory.getCurrentSession();
         session.beginTransaction();
-
-        // 각각의 처리 들어갈 부분
         session.save(member);
         session.getTransaction().commit();
     }
