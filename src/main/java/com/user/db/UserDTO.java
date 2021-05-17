@@ -1,9 +1,6 @@
-package com.user.model;
+package com.user.db;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -12,7 +9,7 @@ import javax.persistence.Id;
 @Getter
 @Setter
 @NoArgsConstructor
-@Builder
+@AllArgsConstructor
 public class UserDTO {
     @Id
     private String email;
@@ -22,6 +19,4 @@ public class UserDTO {
     private String tel;
     private String postalCode;
     private String address;
-
-
 }

@@ -11,7 +11,17 @@ $(function () {
     $("#password-check").on("propertychange change keyup paste input blur", function (){
         checkPasswordMatching($(this).val());
     });
+
+    $("#submit_btn").on("click", function (){
+        fn_submit();
+    });
 });
+
+function fn_submit(){
+    let comSubmit = new ComSubmit("reg-form");
+    comSubmit.setUrl("/user/register.do");
+    comSubmit.submit();
+}
 
 function emailValidation(email) {
     const emailReg = /^([0-9a-zA-Z.-]+)@([0-9a-zA-Z-]+)(.[0-9a-zA-Z_-]+){1,2}$/;    // 이메일 정규표현식

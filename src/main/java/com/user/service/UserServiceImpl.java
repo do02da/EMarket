@@ -1,6 +1,6 @@
 package com.user.service;
 
-import com.user.model.UserDTO;
+import com.user.db.UserDTO;
 
 public class UserServiceImpl implements UserService{
 
