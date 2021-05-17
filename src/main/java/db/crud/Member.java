@@ -1,62 +1,22 @@
 package db.crud;
 
+import lombok.*;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@RequiredArgsConstructor
 public class Member {
 
-    // @Id : 해당 프로퍼티가 테이블의 주키(primary key) 역할
-    // @GeneratedValue : 주키의 값을 위한 자동 생성 전략을 명시하는데 사용
     @Id
     @GeneratedValue
     private int id;
-
+    @NonNull
     private String name;
-
+    @NonNull
     private String message;
-
-    public Member() {
-    }
-
-    public Member(String name, String message) {
-        super();
-        this.name = name;
-        this.message = message;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
-    }
-
-    @Override
-    public String toString() {
-        return "Member{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", message='" + message + '\'' +
-                '}';
-    }
-
 }

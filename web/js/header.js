@@ -7,7 +7,7 @@ $(document).ready(function() {
     $("#reg_btn").on("click", function (e) {
         e.preventDefault();
         fn_reg_open();
-    })
+    });
 });
 
 function fn_login_open() {

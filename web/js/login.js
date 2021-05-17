@@ -1,7 +1,13 @@
-$(function () {
-    $("#input_email").blur(function () {
+$(document).ready(function() {
+    $("#input_email").blur(function (e) {
+        e.preventDefault();
         email_validation($(this).val());
-    })
+    });
+
+    $("#submit_btn").on("click", function (e) {
+        e.preventDefault();
+        fn_submit();
+    });
 });
 
 function email_validation(email) {
@@ -17,4 +23,10 @@ function email_validation(email) {
         // 유효성 검사 통과
 
     }
+}
+
+function fn_submit() {
+    let comSubmit = new ComSubmit("login-form");
+    comSubmit.setUrl("/user/login.do");
+    comSubmit.submit();
 }
