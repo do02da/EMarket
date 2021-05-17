@@ -16,17 +16,17 @@
 <%@ include file="/WEB-INF/jsp/header.jsp" %>
 
 <main class="form-signin text-center">
-    <form>
-        Login
+    <form id="login-form">
+        로그인
         <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 
         <div class="form-floating">
-            <input type="email" class="form-control" id="input_email" placeholder="name@example.com">
+            <input type="email" class="form-control" id="input_email" name="email" placeholder="name@example.com">
             <label for="input_email">이메일</label>
         </div>
 
         <div class="form-floating">
-            <input type="password" class="form-control" id="input_pw" placeholder="비밀번호">
+            <input type="password" class="form-control" id="input_pw" name="password" placeholder="비밀번호">
             <label for="input_pw">비밀번호</label>
         </div>
 
@@ -35,7 +35,7 @@
                 <input type="checkbox" value="remember-me"> Remember me
             </label>
         </div>
-        <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+        <button class="w-100 btn btn-lg btn-primary" type="submit" id="submit_btn">로그인</button>
         <p class="mt-5 mb-3 text-muted">&copy; 2021</p>
     </form>
 </main>

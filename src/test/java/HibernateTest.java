@@ -23,8 +23,9 @@ public class HibernateTest {
         insert(member);
 
         // Select One
-        Member selectedMember = selectedById(1);
+        Member selectedMember = selectedByTest("hello test");
 
+        assertEquals("test", selectedMember.getName());
         // Update
         selectedMember.setMessage("Hello Hibernate");
         update(selectedMember);
@@ -57,6 +58,16 @@ public class HibernateTest {
         Session session = sessionFactory.getCurrentSession();
         session.beginTransaction();
         Member selectedMember = session.get(Member.class, i);
+
+        session.getTransaction().commit();
+
+        return selectedMember;
+    }
+
+    public Member selectedByTest(String i) {
+        Session session = sessionFactory.getCurrentSession();
+        session.beginTransaction();
+        Member selectedMember = session.load(Member.class, i);
 
         session.getTransaction().commit();
 

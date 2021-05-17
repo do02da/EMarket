@@ -1,7 +1,6 @@
 package db.crud;
 
 import lombok.*;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -10,26 +9,14 @@ import javax.persistence.Id;
 @Getter
 @Setter
 @NoArgsConstructor
+@RequiredArgsConstructor
 public class Member {
 
     @Id
     @GeneratedValue
     private int id;
+    @NonNull
     private String name;
+    @NonNull
     private String message;
-
-    @Builder
-    public Member(String name, String message) {
-        this.name = name;
-        this.message = message;
-    }
-
-    @Override
-    public String toString() {
-        return "Member{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", message='" + message + '\'' +
-                '}';
-    }
 }
