@@ -23,15 +23,12 @@ body {
 }
 
 .form-signup input {
-    margin-bottom: 0px;
+    margin-bottom: 0;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
 }
 .form-signup .form-floating #nickname{
     margin-bottom: 20px;
-}
-.form-signup .form-floating #tel{
-    margin-bottom: 10px;
 }
 .form-signup .form-floating #email-validation-text {
     text-align: left;

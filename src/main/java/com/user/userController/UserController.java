@@ -12,7 +12,9 @@ import java.util.Map;
 @Controller
 @RequestMapping(value = "/user")
 public class UserController {
-    Logger logger = (Logger) LogManager.getLogger(this.getClass());
+    Logger logger = LogManager.getLogger(this.getClass()); 
+    // Warning:(15, 22) Casting 'LogManager.getLogger(...)' to 'Logger' is redundant
+    // (Logger) 캐스팅 지움
 
     @RequestMapping(value = "/register.do")
     public ModelAndView register(@RequestParam Map<String, Object> regForm) {

@@ -43,6 +43,7 @@
         <div class="form-floating">
             <input type="text" class="form-control" id="tel" name="tel">
             <label for="tel">전화번호</label>
+            <text id="tel-validation-text">- 없이 입력해주세요</text>
         </div>
 
         <div class="post-input">
@@ -53,8 +54,6 @@
         </div>
 
         <button class="w-100 btn btn-lg btn-primary" type="submit" id="submit_btn">Sign up</button>
-
-
 
         <p class="mt-5 mb-3 text-muted">&copy; 2021</p>
     </form>

@@ -2,20 +2,45 @@ $(function () {
 
     $("#email").on("blur", function (){
         emailValidation($(this).val());
-    });
+    }); // email val
 
     $("#password").on("propertychange change keyup paste input blur", function (){
         passwordValidation($(this).val());
-    });
+    }); // password val
 
     $("#password-check").on("propertychange change keyup paste input blur", function (){
         checkPasswordMatching($(this).val());
-    });
+    }); // password check val
 
     $("#submit_btn").on("click", function (){
         fn_submit();
-    });
+    }); // sub val
+
+    $("#tel").on("blur", function (){
+        telValidation($(this).val());
+    }); // tel val
 });
+
+function telValidation(tel){
+    const telReg = /^\d{2,3}-\d{3,4}-\d{4}$/;;
+    const validationText = $("#tel-validation-text");
+
+    let msg = "";
+    let color = "";
+    if(gfn_isNull(tel)){
+        msg = "전화번호를 입력해주세요";
+        color = "#CCCC00";
+    }else if (!telReg.test(tel)) {    // 형식 맞지 않으면
+        msg = "형식에 맞게 입력해주세요";
+        color = "RED";
+    } else {
+        msg = "사용가능";
+        color = "BLUE";
+    }
+
+    validationText.css("color", color);
+    validationText.text(msg);
+} // telValidation
 
 function fn_submit(){
     let comSubmit = new ComSubmit("reg-form");
@@ -35,7 +60,7 @@ function emailValidation(email) {
         msg = "이메일을 확인해주세요";
         color = "RED";
     } else {
-        // 중복 체크 기능 추가해야함.
+        //TODO: 중복 체크 기능 추가해야함.
         msg = "사용가능";
         color = "BLUE";
     }
