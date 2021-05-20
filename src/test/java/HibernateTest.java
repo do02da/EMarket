@@ -16,8 +16,6 @@ public class HibernateTest {
     Logger logger = (Logger) LogManager.getLogger(this.getClass());
     SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
 
-
-
     @Test
     public void test() {
         // Insert
@@ -46,6 +44,7 @@ public class HibernateTest {
         session.beginTransaction();
         session.delete(updatedMember);
         session.getTransaction().commit();
+
     }
 
     private void update(Member selectedMember) {
@@ -59,6 +58,7 @@ public class HibernateTest {
         Session session = sessionFactory.getCurrentSession();
         session.beginTransaction();
         Member selectedMember = session.get(Member.class, i);
+
         session.getTransaction().commit();
 
         return selectedMember;

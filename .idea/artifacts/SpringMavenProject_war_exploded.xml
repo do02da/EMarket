@@ -6,6 +6,7 @@
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="SpringMavenProject" />
+          <element id="jpa-descriptors" facet="SpringMavenProject/jpa/JPA" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: javax.servlet:jstl:1.2" />
@@ -25,11 +26,6 @@
           <element id="library" level="project" name="Spring MVC-5.2.3.RELEASE" />
           <element id="library" level="project" name="Maven: org.mariadb.jdbc:mariadb-java-client:2.7.2" />
           <element id="library" level="project" name="Hibernate 5.4.11-5.4.11" />
-          <element id="library" level="project" name="Maven: org.apache.commons:commons-dbcp2:2.8.0" />
-          <element id="library" level="project" name="Maven: org.apache.commons:commons-pool2:2.8.1" />
-          <element id="library" level="project" name="Maven: commons-logging:commons-logging:1.2" />
-          <element id="library" level="project" name="Maven: org.hibernate:hibernate-core:5.4.31.Final" />
-          <element id="library" level="project" name="Maven: org.hibernate.common:hibernate-commons-annotations:5.1.2.Final" />
         </element>
       </element>
     </root>
