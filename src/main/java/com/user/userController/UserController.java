@@ -11,7 +11,7 @@ import java.util.Map;
 
 @Controller
 @RequestMapping(value = "/user")
-public class userController {
+public class UserController {
     Logger logger = (Logger) LogManager.getLogger(this.getClass());
 
     @RequestMapping(value = "/register.do")
@@ -29,6 +29,4 @@ public class userController {
         logger.debug(Login_form);
         logger.debug(Login_form.get("email"));
     }
-
-
 } // class
