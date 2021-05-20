@@ -10,7 +10,7 @@ import java.util.Map;
 
 @Controller
 @RequestMapping(value = "/user")
-public class userController {
+public class UserController {
     Logger logger = (Logger) LogManager.getLogger(this.getClass());
 
     @RequestMapping(value="/login.do")
