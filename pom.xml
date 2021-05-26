@@ -14,6 +14,7 @@
         <org.springframework-version>5.2.3.RELEASE</org.springframework-version>
         <log4j2.version>2.13.3</log4j2.version>
         <org.aspectj-version>1.6.10</org.aspectj-version>
+        <hibernate-version>5.4.31.Final</hibernate-version>
     </properties>
 
     <dependencies>
@@ -58,6 +59,12 @@
             <version>${org.springframework-version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+            <version>${org.springframework-version}</version>
+        </dependency>
+
         <!-- Servlet -->
         <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
         <dependency>
@@ -80,6 +87,7 @@
             <artifactId>jstl</artifactId>
             <version>1.2</version>
         </dependency>
+
 
         <!-- Logging -->
         <!-- log4j2 setting  -->
@@ -135,7 +143,22 @@
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
-            <version>5.4.31.Final</version>
+            <version>${hibernate-version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-hikaricp -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-hikaricp</artifactId>
+            <version>${hibernate-version}</version>
+        </dependency>
+
+
+        <!-- https://mvnrepository.com/artifact/org.hibernate.javax.persistence/hibernate-jpa-2.1-api -->
+        <dependency>
+            <groupId>org.hibernate.javax.persistence</groupId>
+            <artifactId>hibernate-jpa-2.1-api</artifactId>
+            <version>1.0.2.Final</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->

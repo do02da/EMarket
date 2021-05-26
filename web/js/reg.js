@@ -12,9 +12,15 @@ $(function () {
         checkPasswordMatching($(this).val());
     });
 
-    $("#submit_btn").on("click", function (){
-        fn_submit();
+    $("#submit_btn").on("click", function (e){
+        e.preventDefault();
+        // fn_submit();
     });
+
+    $("#DaumPostCode").on("click", function (e) {
+        e.preventDefault();
+        daumPostcode();
+    })
 });
 
 function fn_submit(){
@@ -28,6 +34,7 @@ function emailValidation(email) {
     const validationText = $("#email-validation-text");
     let msg = "";
     let color = "";
+
     if (gfn_isNull(email)) {    // 이메일이 비어있을 때
         msg = "이메일을 입력해주세요";
         color = "#CCCC00";
@@ -80,7 +87,7 @@ function checkPasswordMatching(pwCheck){
 function daumPostcode(){
     new daum.Postcode({
         oncomplete: function(data) {
-// 각 주소의 노출 규칙에 따라 주소를 조합한다.
+            // 각 주소의 노출 규칙에 따라 주소를 조합한다.
             // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
             let addr = ''; // 주소 변수
             let extraAddr = ''; // 참고항목 변수

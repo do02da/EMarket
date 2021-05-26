@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 5.3//EN"
+        " http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.user.db.UserDTO" table="user">
+        <id name="email">
+        </id>
+        <property name="name"></property>
+        <property name="pw"></property>
+        <property name="tel"></property>
+        <property name="postalCode"></property>
+        <property name="address"></property>
+    </class>
+</hibernate-mapping>

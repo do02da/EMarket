@@ -46,15 +46,13 @@
         </div>
 
         <div class="post-input">
-            <input type="button" class="d_btn" onclick="daumPostcode()" value="우편번호 찾기" readonly>
+            <input type="button" class="d_btn" id="DaumPostCode" value="우편번호 찾기" readonly>
             <input type="text" class="form-control" id="postcode" name="postcode" placeholder="우편번호" readonly>
             <input type="text" class="form-control" id="address" name="address" placeholder="주소" readonly>
             <input type="text" class="form-control" id="detailAddress" name="detail-address" placeholder="상세주소">
         </div>
 
-        <button class="w-100 btn btn-lg btn-primary" type="submit" id="submit_btn">Sign up</button>
-
-
+        <button class="w-100 btn btn-lg btn-primary" id="submit_btn">Sign up</button>
 
         <p class="mt-5 mb-3 text-muted">&copy; 2021</p>
     </form>

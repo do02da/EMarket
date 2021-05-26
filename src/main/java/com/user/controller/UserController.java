@@ -1,5 +1,8 @@
-package com.user.userController;
+package com.user.controller;
 
+import javax.annotation.Resource;
+
+import com.user.service.UserService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Controller;
@@ -14,6 +17,9 @@ import java.util.Map;
 public class UserController {
     Logger logger = (Logger) LogManager.getLogger(this.getClass());
 
+    @Resource(name="userService")
+    UserService userService;
+
     @RequestMapping(value = "/register.do")
     public ModelAndView register(@RequestParam Map<String, Object> regForm) {
 //        ModelAndView
@@ -23,12 +29,17 @@ public class UserController {
         return null;
     } // register
 
+
+    /**
+     * 로그인
+     * @author   김도영
+     * @param    LoginForm 로그인 폼에 입력한 정보
+     * @return
+     */
     @RequestMapping(value="/login.do")
-    public void login_submit(@RequestParam Map<String, Object> Login_form) {
-        logger.debug(("---------TEST---------"));
-        logger.debug(Login_form);
-        logger.debug(Login_form.get("email"));
+    public void login_submit(@RequestParam Map<String, Object> LoginForm) throws Exception {
+        logger.debug(LoginForm);
+
+        userService.Login(LoginForm);
     }
-
-
 } // class

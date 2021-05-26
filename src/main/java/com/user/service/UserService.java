@@ -1,10 +1,7 @@
 package com.user.service;
 
-
-import com.user.db.UserDTO;
+import java.util.Map;
 
 public interface UserService {
-
-    void insertMember(UserDTO user);
-
-} // UserService
+    void Login(Map<String, Object> LoginForm) throws Exception;
+}
